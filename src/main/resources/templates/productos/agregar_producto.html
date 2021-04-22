@@ -12,7 +12,7 @@
         </div>
         <form th:object="${producto}" th:action="@{/productos/agregar}" method="post">
             <div class="form-group">
-                <label for="nombre">Nombre del producto</label>
+                <label for="nombre">Nombre del producto - Experimentos</label>
                 <input autocomplete="off" autofocus th:field="*{nombre}" id="nombre"
                        placeholder="Escribe el nombre del producto" type="text"
                        class="form-control" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid' : ''">
