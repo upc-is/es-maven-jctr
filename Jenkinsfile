@@ -27,7 +27,7 @@ pipeline {
 		stage ('sonarQube Quality') {
 			steps {
 				withSonarQubeEnv('sonarQube') {
-					bat 'mvn clean verify sonar:sonar'
+					bat 'mvn clean package verify sonar:sonar'
 				}
 			}
 		}
