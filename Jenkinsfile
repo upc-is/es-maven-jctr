@@ -3,6 +3,7 @@ pipeline {
     tools { 
         maven 'MAVEN_3_6_3' 
         jdk 'JDK_1_11' 
+		sonarQube 'sonarQube'
     }
 	
     stages {
@@ -24,6 +25,13 @@ pipeline {
             }
         }
 
+		stage ('sonarQube Quality') {
+			steps {
+				withSonarQubeEnv('sonarQube') {
+					bat 'mvn verify sonar:sonar'
+				}
+			}
+		}
 
         stage ('package Stage') {
             steps {
