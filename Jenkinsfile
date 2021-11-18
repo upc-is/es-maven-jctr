@@ -24,10 +24,10 @@ pipeline {
             }
         }
 
-		stage ('sonarQube Quality') {
+		stage ('sonarQube Analysis') {
 			steps {
 				withSonarQubeEnv('sonarQube') {
-					bat 'mvn clean package verify sonar:sonar'
+					bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=ventas'
 				}
 			}
 		}
