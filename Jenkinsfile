@@ -6,7 +6,7 @@ pipeline {
     }
 	
     stages {
-        stage ('Compile Stage 2022-1') {
+        stage ('Compile Stage for 2022-01') {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage ('Testing Stage') {
+        stage ('Testing Stage for 2022-01') {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
