@@ -6,7 +6,7 @@ pipeline {
     }
 	
     stages {
-        stage ('Compile Stage 2021-2') {
+        stage ('Compile Stage 2022-1') {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
@@ -24,13 +24,13 @@ pipeline {
             }
         }
 
-		stage ('sonarQube Analysis') {
+		/* stage ('sonarQube Analysis') {
 			steps {
 				withSonarQubeEnv('sonarQube') {
 					bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=ventas'
 				}
 			}
-		}
+		}*/
 
         stage ('package Stage') {
             steps {
