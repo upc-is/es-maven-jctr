@@ -24,13 +24,13 @@ pipeline {
             }
         }
 
-		/* stage ('sonarQube Analysis') {
+		 stage ('sonarQube Analysis') {
 			steps {
 				withSonarQubeEnv('sonarQube') {
-					bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=ventas'
+					bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=Spring-Delivery3'
 				}
 			}
-		}*/
+		}
 
         stage ('package Stage') {
             steps {
