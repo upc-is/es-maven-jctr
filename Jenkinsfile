@@ -35,7 +35,7 @@ pipeline {
         stage ('package Stage') {
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
-                    sh 'mvn package'
+                    bat 'mvn package'
                 }
             }
         }
