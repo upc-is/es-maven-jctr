@@ -6,7 +6,7 @@ pipeline {
     }
 	
     stages {
-        stage ('Compile Stage 2022-02') {
+        stage ('Compile Stage 2023-02') {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage ('Testing Stage 2022-02') {
+        stage ('Testing Stage 2023-02') {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
@@ -32,7 +32,7 @@ pipeline {
 		}
 	}*/
 
-        stage ('package Stage') {
+        stage ('package Stage 2023-2') {
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
                     bat 'mvn package'
