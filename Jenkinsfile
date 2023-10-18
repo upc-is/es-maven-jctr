@@ -10,7 +10,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
-                    sh 'mvn clean compile'
+                    bat 'mvn clean compile'
                 }
             }
         }
@@ -19,18 +19,18 @@ pipeline {
 
             steps {
                 withMaven(maven : 'MAVEN_3_6_3') {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
 
-	 stage ('sonarQube Analysis') {
+	 /*stage ('sonarQube Analysis') {
 		steps {
 			withSonarQubeEnv('sonarLocal') {
 				sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=one'
 			}
 		}
-	}
+	}*/
 
         stage ('package Stage') {
             steps {
